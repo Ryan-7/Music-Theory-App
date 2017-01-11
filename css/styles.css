@@ -1,0 +1,295 @@
+
+html {
+    position: relative;
+    min-height: 100%;
+   
+}
+
+body {
+    background-color: #00B3FE;
+    font-family: "Raleway";
+    color: white;
+    margin-bottom: 50px;
+    min-height: 600px;
+}
+
+a:active, a:visited, a:link {
+    color: white;
+}
+
+.navbar {
+    background-color:#384452;  
+    padding-top: 10px;
+    padding-bottom: 10px;
+
+}
+
+.navbar .container-fluid {
+    padding-left: 40px;
+    padding-right: 40px;
+}
+
+
+.navbar-header .navbar-brand {
+    font-weight: 900; 
+    color: white;
+    transition: .5s;
+}
+
+
+.navbar .navbar-nav a {
+    color: white;
+    font-weight: 900;
+}
+
+.navbar a:hover {
+    color: #06B0FC;
+    transition: .5s;
+}
+
+.navbar .navbar-brand:hover {
+    color: #5E5E5E;
+}
+
+.nav li a:hover, .nav li a:active,.nav li a:focus {
+    background: transparent;
+}
+
+
+.icon-bar {
+    background-color: black;
+}
+
+.navbar-toggle {
+    background-color: white;
+}
+
+.header {
+    margin-top: 100px;
+}
+
+h1, h2, h3, h4, h5, h6, h7 {
+    font-weight: 700;
+}
+
+h1 {
+    margin-bottom: 20px;
+}
+
+.tagline {
+    display: block;
+    font-size: 10px;
+    font-weight: 400;
+    text-indent: 1px;
+    position: relative;
+    bottom: 5px;
+}
+
+
+.hidden {
+    visibility: hidden; 
+}
+
+.hide {
+    display: none;
+}
+
+.arrow {
+    border: none;
+}
+
+.yellow {
+    color: black;
+    background: yellow;
+}
+
+.white {
+    background: #5E5E5E;
+    color: white;
+}
+
+
+div.tools {
+    transition: 1s;
+}
+
+.tools p:hover {
+    cursor: pointer;
+    color: #5E5E5E;
+    transition: 1s;
+}
+
+
+.tools .btn .btn-primary {
+    margin-bottom: 15px;
+    color: white;
+}
+
+.tools button:focus {
+    background-color: white;
+}
+
+
+table {
+    margin: 0 auto;
+    margin-bottom: 10px;
+    transition: 1s;
+    border-spacing: 5px;
+    border-color: transparent;
+}
+td {
+  border: none;
+  border-collapse: separate;
+  padding: 5px;
+  margin: 0 auto;
+  text-align: center;
+  font-size: 18px;
+    transition: 1s;
+}
+
+.table-responsive {
+    border: none;
+}
+
+#generate {
+    margin-bottom: 10px;
+    color: #7b7b7b;
+}
+
+#audio {
+    margin-bottom: 10px;
+}
+
+#info {
+    font-weight: 400;
+    font-style: italic;
+}
+
+.control-group {
+	display: inline-block;
+	width: 200px;
+	height: 20px;
+	margin-bottom: 30px;
+	padding: 0;
+	text-align: left;
+	vertical-align: top;
+	background: transparent;
+	box-shadow: 0 1px 2px rgba(0,0,0,.1);
+}
+
+
+.select {
+	position: relative;
+	display: inline-block;
+	width: 100%;
+	margin-bottom: 15px;
+}
+
+.select select {
+	display: inline-block;
+	width: 100%;
+	padding: 10px 15px;
+	cursor: pointer;
+	color: #7b7b7b;
+	border: 0;
+	border-radius: 0;
+	outline: 0;
+	background: white;
+	appearance: none;
+	-webkit-appearance: none;
+	-moz-appearance: none;
+}
+
+.select select::-ms-expand {
+	display: none;
+}
+
+.select select:hover,
+.select select:focus {
+	color: #000;
+	background: white;
+}
+
+.select select:disabled {
+	pointer-events: none;
+	opacity: .5;
+}
+
+.select__arrow {
+	position: absolute;
+	top: 16px;
+	right: 15px;
+	width: 0;
+	height: 0;
+	pointer-events: none;
+	border-width: 8px 5px 0 5px;
+	border-style: solid;
+	border-color: #7b7b7b transparent transparent transparent;
+}
+.select select:hover ~ .select__arrow,
+.select select:focus ~ .select__arrow {
+	border-top-color: #000;
+}
+
+.select select:disabled ~ .select__arrow {
+	border-top-color: #ccc;
+}
+
+
+
+.footer {
+    position: absolute;
+    bottom: 0;
+    width: 100%;
+    height: 50px;
+    background-color: #384452;
+    color: white;
+    text-align: center;
+    font-weight: 700;
+    padding-top: 15px;
+}
+
+.footer a {
+    color: inherit;
+    transition: .5s;
+}
+
+.footer a:hover {
+    text-decoration: none;
+    color: #F5E7D8;
+    transition: .5s;
+}
+
+
+@media only screen and (max-width: 772px) {
+    .navbar .container-fluid {
+        padding-left: 20px;
+        padding-right: 20px;
+    }
+    body {
+        margin-bottom: 100px;
+        min-height: 700px;
+    }
+    .footer {
+        height: 100px;
+        padding-top: 30px;
+    }
+    
+    
+    
+    h1 {
+        font-size: 25px;
+    }
+    
+    h3 {
+        font-size: 16px;
+    }
+    
+    td {
+        font-size: 12px;
+        padding: 3px;
+    }
+}
+
+
+ 

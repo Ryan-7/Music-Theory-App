@@ -1,0 +1,199 @@
+<!DOCTYPE html>
+<html lang="en">
+
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="description" content="Guitar players Toolbox">
+    <title>PopularChords | Your music improvising toolkit</title>
+
+    <link href="css/bootstrap.min.css" rel="stylesheet">
+    <link href="css/animate.css" rel="stylesheet">
+    <link href="css/styles.css" rel="stylesheet">
+
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.5.0/css/font-awesome.min.css">
+    <link href="https://fonts.googleapis.com/css?family=Raleway:400,700,900" rel="stylesheet">
+
+
+    <!-- HTML5 shim and Respond.js for IE8 support of HTML5 elements and media queries -->
+    <!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
+    <!--[if lt IE 9]>
+      <script src="https://oss.maxcdn.com/html5shiv/3.7.2/html5shiv.min.js"></script>
+      <script src="https://oss.maxcdn.com/respond/1.4.2/respond.min.js"></script>
+    <![endif]-->
+  </head>
+
+  <body>
+
+    <div class="navbar navbar-fixed-top">
+      <div class="container-fluid">
+        <div class="navbar-header">
+          <a class="navbar-brand" href="index.html">PopularChords.com<span class="tagline">Your music companion</span></a>
+          <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target=".navbar-collapse">
+            <span class="sr-only">Toggle navigation</span>
+            <span class="icon-bar"></span>
+            <span class="icon-bar"></span>
+            <span class="icon-bar"></span>
+          </button>
+          <span class="clearfloat"></span>
+        </div>
+
+        <ul class='nav navbar-nav navbar-right collapse navbar-collapse'>
+          <li><a href="about.html">About</a></li>
+        </ul>
+      </div>
+    </div>
+
+
+    <!--Hero header -->
+
+    <div class="container header">
+      <div class="row">
+        <div class="col-md-3 col-xs-12">
+          <h4>Jam Tools</h4>
+          <div class="tools">
+            <h3>Tools</h3>
+            <p id="viewProgressions"><i class="fa fa-cogs" aria-hidden="true"></i> Common Chord Progression Generator</p>
+            <button id="generate" class=" hide btn btn-small btn-default"><i id="refresh" class="fa fa-refresh" aria-hidden="true"></i> Chord Progression</button>
+
+            <p id="loadBackingTrack"><i class="fa fa-music" aria-hidden="true"></i> Load Backing Track to Improvise Over</p>
+
+            <div id="backingTrack" class="hide">
+              <audio controls="controls" id="audio">
+                <source id="audioSource" type="audio/mp3" /> Your browser does not support the audio tag.
+              </audio>
+            </div>
+
+            <p id="howToUse"><i class="fa fa-info-circle" aria-hidden="true"></i> How to use the notes to improvise and solo</p>
+            <h5 class="hide animatedFast slideInLeft" id="info">Music is all about tension and release. While improvising, a good rule of thumb is to start and end your musical ideas on "target" notes. The majority of your notes should be target notes, while sprinkling the tension notes inbetween them to create musical ideas.</h5>
+
+            <p id="improvise"><i id="improviseToggle" class="fa fa-toggle-off" aria-hidden="true"></i> Toggle Target Notes</p>
+            <p id="tension"><i id="tensionToggle" class="fa fa-toggle-off" aria-hidden="true"></i> Toggle Tension Notes</p>
+
+
+            <p id="infoBox"></p>
+          </div>
+
+
+
+        </div>
+        <div class="col-md-9 col-xs-12 text-center">
+          <h3>Practice improvisation over every major key</h3>
+          <h1>Select the key you wish to practice in</h1>
+
+          <div class="control-group">
+
+            <div class="select">
+              <form id="keyForm">
+                <select id="keys">
+                  <option value="">Select your desired Key</option>
+                  <option value="cMajor">The Key of C</option>
+                  <option value="cSharpMajor">The Key of C#</option>
+                  <option value="dMajor">The Key of D</option>
+                  <option value="eFlatMajor">The Key of Eb</option>
+                  <option value="eMajor">The Key of E</option>
+                  <option value="fMaj">The Key of F</option>
+                  <option value="fSharpMajor">The Key of F#</option>
+                  <option value="gMajor">The Key of G</option>
+                  <option value="aFlatMajor">The Key of Ab</option>
+                  <option value="aMajor">The Key of A</option>
+                  <option value="bFlatMajor">The Key of Bb</option>
+                  <option value="bMajor">The Key of B</option>
+                </select>
+                <div class="select__arrow"></div>
+              </form>
+            </div>
+          </div>
+
+
+          <h3 id="notesInThisKey" class="hide">Notes</h3>
+          <table class="table-responsive" id="notesTable">
+            <tr>
+              <td id="notes-0" class="highlight"></td>
+              <td id="notes-1" class="lowlight"></td>
+              <td id="notes-2" class="highlight"></td>
+              <td id="notes-3" class="lowlight"></td>
+              <td id="notes-4" class="highlight"></td>
+              <td id="notes-5" class="lowlight"></td>
+              <td id="notes-6" class="lowlight"></td>
+            </tr>
+            <tr>
+              <td class=""><i class="fa fa-arrow-up arrow home hidden animated flash infinite" aria-hidden="true"></i></td>
+              <td class=""><i class="fa fa-arrow-up arrow tension hidden animated flash infinite" aria-hidden="true"></i></td>
+              <td class=""><i class="fa fa-arrow-up arrow home hidden animated flash infinite" aria-hidden="true"></i></td>
+              <td class=""><i class="fa fa-arrow-up arrow tension hidden animated flash infinite" aria-hidden="true"></i></td>
+              <td class=""><i class="fa fa-arrow-up arrow home hidden animated flash infinite " aria-hidden="true"></i></td>
+              <td class=""><i class="fa fa-arrow-up arrow tension hidden animated flash infinite " aria-hidden="true"></i></td>
+              <td class=""><i class="fa fa-arrow-up arrow tension hidden animated flash infinite " aria-hidden="true"></i></td>
+            </tr>
+          </table>
+
+
+          <h3 id="chordsInThisKey" class="hide">Chords</h3>
+          <table id="chordsTable">
+            <tr>
+              <td id="chords-0"></td>
+              <td id="chords-1"></td>
+              <td id="chords-2"></td>
+              <td id="chords-3"></td>
+              <td id="chords-4"></td>
+              <td id="chords-5"></td>
+              <td id="chords-6"></td>
+            </tr>
+            <tr>
+              <td id="romanChords-0"></td>
+              <td id="romanChords-1"></td>
+              <td id="romanChords-2"></td>
+              <td id="romanChords-3"></td>
+              <td id="romanChords-4"></td>
+              <td id="romanChords-5"></td>
+              <td id="romanChords-6"></td>
+            </tr>
+          </table>
+
+
+          <div id="commonProgressions" class="hide">
+            <h3>Progressions</h3>
+            <table id="progressionTable">
+              <tr>
+                <td id="chord-0"></td>
+                <td id="chord-1"></td>
+                <td id="chord-2"></td>
+                <td id="chord-3"></td>
+              </tr>
+              <tr>
+                <td id="roman-0"></td>
+                <td id="roman-1"></td>
+                <td id="roman-2"></td>
+                <td id="roman-3"></td>
+              </tr>
+            </table>
+
+          </div>
+        </div>
+
+
+      </div>
+    </div>
+    </div>
+
+
+
+
+    <footer class="footer">
+      <p>This is an ongoing project - check back frequently for new features. Cheers!</p>
+    </footer>
+
+
+
+
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.min.js"></script>
+    <script src="js/bootstrap.min.js"></script>
+    <script src="js/app.js"></script>
+
+
+
+  </body>
+</html>
+
