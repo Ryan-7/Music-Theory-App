@@ -1,7 +1,7 @@
 # Popular-Chords
 
 
-This app is written using the Object Literal design pattern and purposely uses pure JavaScript - no jQuery!#
+This app is written using the Object Literal design pattern and purposely uses pure JavaScript - no jQuery!
 
 A web app that helps users quickly and easily find all of the notes and chords in any given Major key.
 
