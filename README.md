@@ -5,5 +5,5 @@ This app is written using the Object Literal design pattern and purposely uses p
 
 A web app that helps users quickly and easily find all of the notes and chords in any given Major key.
 
-The second problem this app aims to solve is helping musicians easily locate which notes will sound best over any given key while improvising. 
+I created this app for the use of my friends and I to aid in learning musical theory and improvisation. 
 
